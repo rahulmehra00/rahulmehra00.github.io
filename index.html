@@ -370,4 +370,25 @@
     ></script>
     <script type="module" src="js/main.js"></script>
   </body>
+
+  <script>
+   
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      const navBtn = document.getElementById("nav-btn");
+      const nav = document.getElementById("nav");
+      const navBtnImg = document.getElementById("nav-btn-img");
+  
+      navBtn.addEventListener("click", function () {
+        nav.classList.toggle("open");
+  
+        if (nav.classList.contains("open")) {
+          navBtnImg.src = "img/icons/close.svg";
+        } else {
+          navBtnImg.src = "img/icons/open.svg";
+        }
+      });
+    });
+  </script>
+  
 </html>

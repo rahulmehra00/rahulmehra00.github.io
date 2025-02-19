@@ -19,7 +19,6 @@ This is a very simple, but elegant responsive portfolio template built using pla
 - Responsive Design
 - Single-page layout
 - Simple and customizable
-- PHP Mailer Integration
 
 ## Live Preview
 

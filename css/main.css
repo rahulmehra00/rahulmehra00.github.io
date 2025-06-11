@@ -515,6 +515,7 @@ body.dark .social-links-row a:hover {
   margin: 2rem auto;
   background: rgba(30, 32, 44, 0.05);
   max-width: 700px;
+  box-shadow: rgba(19, 93, 240, 0.15) 0px 0px 10px 0px;
 }
 
 .skills-title {
@@ -700,6 +701,7 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   border-radius: 16px;
   padding: 10px;
   background: rgba(30, 32, 44, 0.05);
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 0px 10px 0px;
 }
 
 .project-box a {
@@ -1099,15 +1101,16 @@ body.dark .dark-mode-toggle:hover {
 
 /* Each education card */
 .education-card {
-  display: flex; /* Changed to flex container */
-  flex-direction: row; /* Align items in a row */
-  align-items: flex-start; /* Align items to the top of the flex container */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   background: var(--white-color);
   border: 1px solid #7c3aed;
   border-radius: 8px;
   padding: 20px;
   min-height: unset;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08),
+    rgba(23, 92, 230, 0.15) 0px 0px 10px 0px;
   position: relative;
   transition: all 0.3s ease-in-out;
   transition-behavior: normal;
@@ -1122,7 +1125,7 @@ body.dark .dark-mode-toggle:hover {
 
 .education-card:nth-child(odd),
 .education-card:nth-child(even) {
-  margin: 0 auto 40px auto; /* Keep consistent centering */
+  margin: 0 auto 40px auto;
   transform: none;
 }
 
@@ -1158,68 +1161,87 @@ body.dark .dark-mode-toggle:hover {
   box-shadow: none;
   border: none;
   padding: 5px;
-  margin-right: 15px; /* Added right margin to separate from text */
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  margin-right: 15px;
+  flex-shrink: 0;
 }
 
 /* Adjust text alignment within education-details */
 .education-details {
   width: 100%;
   text-align: left;
-  display: flex; /* Use flex to stack content */
-  flex-direction: column; /* Stack text content vertically */
+  display: flex;
+  flex-direction: column;
 }
 
 .education-details h3 {
-  margin: 0 0 0.3rem 0; /* Adjusted margin */
-  font-size: 1.15rem; /* Slightly reduced font size */
+  margin: 0 0 0.3rem 0;
+  font-size: 1.15rem;
   color: var(--main-text-color);
   font-weight: 600;
   text-align: left;
 }
 
 .education-degree {
-  color: var(--main-text-color); /* Apply main text color */
-  font-size: 0.95rem; /* Reduced font size */
+  color: var(--main-text-color);
+  font-size: 0.95rem;
   margin-bottom: 0.1rem;
   text-align: left;
 }
 
 .education-duration {
-  color: var(--main-text-color); /* Apply main text color */
-  font-size: 0.85rem; /* Reduced font size */
+  color: var(--main-text-color);
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
   text-align: left;
 }
 
 .education-grade {
-  color: var(--main-text-color); /* Apply main text color */
-  font-size: 0.95rem; /* Reduced font size */
+  color: var(--main-text-color);
+  font-size: 0.95rem;
   margin: 0.5rem 0 0.2rem 0;
   text-align: left;
 }
 
 .education-details p {
   color: var(--main-text-color);
-  font-size: 0.9rem; /* Reduced font size */
+  font-size: 0.9rem;
   margin: 0 0 0.2rem 0;
   text-align: left;
 }
 
 @media (max-width: 600px) {
+  .education-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .education-list::before {
+    content: none;
+  }
+
   .education-card {
-    flex-direction: column; /* Stack logo and text vertically on small screens */
-    align-items: center; /* Center items when stacked */
-    padding: 15px; /* Adjust padding for small screens */
+    margin: 0 auto 40px auto;
+    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .education-card:nth-child(odd),
+  .education-card:nth-child(even) {
+    margin: 0 auto 40px auto;
+    transform: none;
   }
 
   .education-logo {
     margin-right: 0;
-    margin-bottom: 10px; /* Add bottom margin when stacked */
+    margin-bottom: 10px;
   }
 
   .education-details {
-    align-items: center; /* Center text content when stacked */
+    align-items: center;
   }
 
   .education-details h3,
@@ -1227,7 +1249,13 @@ body.dark .dark-mode-toggle:hover {
   .education-duration,
   .education-grade,
   .education-details p {
-    text-align: center; /* Center text when stacked */
+    text-align: center;
+  }
+
+  .education-card::before {
+    left: -8px;
+    right: auto;
+    transform: translateX(-50%);
   }
 }
 
@@ -1235,7 +1263,8 @@ body.dark .dark-mode-toggle:hover {
 body.dark .education-card {
   background: #1a1a1a;
   border: 1px solid #7c3aed;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4),
+    rgba(23, 92, 230, 0.15) 0px 0px 10px 0px;
 }
 
 body.dark .education-card::before {

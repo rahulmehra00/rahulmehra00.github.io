@@ -1069,101 +1069,177 @@ body.dark .dark-mode-toggle:hover {
 
 .education-intro {
   text-align: center;
-  color: #ccc;
-  font-size: 1.2rem;
+  color: #565a5b;
+  font-size: 1rem;
   margin-bottom: 2.5rem;
   margin-top: -1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Timeline container */
+.education-list {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex; /* Use flex for a single column layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  /* Removed grid properties */
+}
+
+/* The vertical line for the timeline */
+.education-list::before {
+  /* Removed properties that create the central line as it's not needed for single column */
+  content: none; /* Hide the line */
+}
+
+/* Each education card */
+.education-card {
+  display: flex; /* Changed to flex container */
+  flex-direction: row; /* Align items in a row */
+  align-items: flex-start; /* Align items to the top of the flex container */
+  background: var(--white-color);
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: unset;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transition-behavior: normal;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  transition-property: all;
+  text-align: left;
+  margin: 0 auto 40px auto;
+  max-width: 650px;
+}
+
+.education-card:nth-child(odd),
+.education-card:nth-child(even) {
+  margin: 0 auto 40px auto; /* Keep consistent centering */
+  transform: none;
+}
+
+/* Circle on the timeline for each card */
+.education-card::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  background-color: #7c3aed;
+  border-radius: 50%;
+  border: 3px solid var(--white-color);
+  z-index: 1;
+  left: -8px;
+  transform: translateX(-50%);
+}
+
+.education-card:nth-child(odd)::before,
+.education-card:nth-child(even)::before {
+  left: -8px;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+/* Adjust the logo for the timeline effect */
 .education-logo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #fff;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 2px solid #e0e0e0;
-  margin-right: 1.5rem;
-  display: block;
+  object-fit: contain;
+  box-shadow: none;
+  border: none;
+  padding: 5px;
+  margin-right: 15px; /* Added right margin to separate from text */
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
-.education-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(30, 32, 44, 0.7);
-  border: 2px solid #7c3aed;
-  border-radius: 16px;
-  padding: 1.1rem 1rem;
-  max-width: 340px;
-  min-width: 220px;
-  width: auto;
-  min-height: unset;
-  box-shadow: 0 2px 24px 0 rgba(124, 58, 237, 0.08);
-  position: relative;
-  transition: box-shadow 0.3s;
-  margin: 0 auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.education-card:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.education-card:last-child {
-  margin-bottom: 2.5rem;
-}
-
-.education-logo {
-  margin: 0 auto 0.7rem auto;
+/* Adjust text alignment within education-details */
+.education-details {
+  width: 100%;
+  text-align: left;
+  display: flex; /* Use flex to stack content */
+  flex-direction: column; /* Stack text content vertically */
 }
 
 .education-details h3 {
-  margin: 0 0 0.3rem 0;
-  font-size: 1.15rem;
-  color: #fff;
+  margin: 0 0 0.3rem 0; /* Adjusted margin */
+  font-size: 1.15rem; /* Slightly reduced font size */
+  color: var(--main-text-color);
   font-weight: 600;
-  text-align: center;
+  text-align: left;
 }
 
 .education-degree {
-  color: #bdbdbd;
-  font-size: 1rem;
+  color: var(--main-text-color); /* Apply main text color */
+  font-size: 0.95rem; /* Reduced font size */
   margin-bottom: 0.1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .education-duration {
-  color: #bdbdbd;
-  font-size: 0.9rem;
+  color: var(--main-text-color); /* Apply main text color */
+  font-size: 0.85rem; /* Reduced font size */
   margin-bottom: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .education-grade {
-  color: #bdbdbd;
-  font-size: 1rem;
+  color: var(--main-text-color); /* Apply main text color */
+  font-size: 0.95rem; /* Reduced font size */
   margin: 0.5rem 0 0.2rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .education-details p {
-  color: #e0e0e0;
-  font-size: 1rem;
+  color: var(--main-text-color);
+  font-size: 0.9rem; /* Reduced font size */
   margin: 0 0 0.2rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 600px) {
   .education-card {
-    max-width: 98vw;
-    padding: 1rem 0.5rem;
+    flex-direction: column; /* Stack logo and text vertically on small screens */
+    align-items: center; /* Center items when stacked */
+    padding: 15px; /* Adjust padding for small screens */
   }
+
   .education-logo {
-    width: 36px;
-    height: 36px;
+    margin-right: 0;
+    margin-bottom: 10px; /* Add bottom margin when stacked */
   }
+
+  .education-details {
+    align-items: center; /* Center text content when stacked */
+  }
+
+  .education-details h3,
+  .education-degree,
+  .education-duration,
+  .education-grade,
+  .education-details p {
+    text-align: center; /* Center text when stacked */
+  }
+}
+
+/* Dark mode overrides for education section */
+body.dark .education-card {
+  background: #1a1a1a;
+  border: 1px solid #7c3aed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .education-card::before {
+  border: 3px solid #1a1a1a;
 }
 
 .about-bordered-box {

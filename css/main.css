@@ -52,7 +52,7 @@ p {
   font-size: 44px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 54px;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -418,7 +418,7 @@ body.dark .social-links-row a:hover {
 
 /* About section */
 .about {
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 
 .about-row {
@@ -673,7 +673,7 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
 /* Works */
 
 .projects {
-  padding: 7rem 0;
+  padding: 4rem 0;
   background-color: var(--primary-bg-color);
 }
 
@@ -1073,7 +1073,7 @@ body.dark .dark-mode-toggle:hover {
   text-align: center;
   color: #565a5b;
   font-size: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   margin-top: -1rem;
   max-width: 500px;
   margin-left: auto;
@@ -1153,8 +1153,8 @@ body.dark .dark-mode-toggle:hover {
 
 /* Adjust the logo for the timeline effect */
 .education-logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: #fff;
   object-fit: contain;

@@ -509,6 +509,12 @@ body.dark .social-links-row a:hover {
 .skills-section {
   padding: 2rem 0;
   margin-top: 2rem;
+  border: 2px solid #7c3aed;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 2rem auto;
+  background: rgba(30, 32, 44, 0.05);
+  max-width: 700px;
 }
 
 .skills-title {
@@ -530,6 +536,16 @@ body.dark .social-links-row a:hover {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .skill-badge {
@@ -626,13 +642,6 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   margin-top: 40px;
 }
 
-.services-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: space-between;
-}
-
 .service-card {
   max-width: 300px;
 }
@@ -675,6 +684,8 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
+  padding: 20px;
 }
 
 .project-box {
@@ -684,6 +695,11 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid #7c3aed;
+  border-radius: 16px;
+  padding: 10px;
+  background: rgba(30, 32, 44, 0.05);
 }
 
 .project-box a {
@@ -711,6 +727,7 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   height: 350px;
   object-fit: cover;
   transition: transform 2s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 12px;
 }
 
 .project-mask {

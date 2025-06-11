@@ -25,6 +25,7 @@
   <header id="header" class="header">
     <div class="container container-lg">
       <div class="header-nav">
+        <button id="darkToggleBtn" class="dark-mode-toggle">🌙</button>
         <a href="#home" class="logo" data-aos="fade-down" data-aos-duration="1000"></a>
         <nav id="nav" class="nav">
           <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
@@ -35,7 +36,13 @@
               <a href="#about" class="nav-link">About</a>
             </li>
             <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
               <a href="#projects" class="nav-link">Works</a>
+            </li>
+            <li class="nav-item">
+              <a href="#education" class="nav-link">Education</a>
             </li>
           </ul>
           <button id="nav-btn" class="nav-btn">
@@ -92,18 +99,23 @@
       <div class="about-row">
         <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
           <p class="about-descr">
-            Hi, I’m Rahul Mehra, a final-year MCA student specializing in Full Stack Development and problem-solving.
+            Hi, I'm Rahul Mehra, a final-year MCA student specializing in Full Stack Development and problem-solving.
             With expertise in the MERN stack, I build scalable web applications and develop efficient solutions, backed
             by 200+ LeetCode challenges. My experience in API development, frontend design, and database management
             enables me to create robust and user-friendly applications. I am eager to apply my skills in a dynamic
             environment and contribute effectively to a team.
-            <br /><br />Looking for a dedicated developer? Let’s work together!
+            <br /><br />Looking for a dedicated developer? Let's work together!
           </p>
           <div class="about-download-btn">
-            <a href="https://drive.google.com/file/d/1JvewVccSzYLmOBZWwrGsa-e-936G1de-/view?usp=sharing"
-              class="btn btn-white">MY RESUME</a>
+            <a href="https://drive.google.com/file/d/1JvewVccSzYLmOBZWwrGsa-e-936G1de-/view?usp=sharing" class="btn">MY
+              RESUME</a>
           </div>
+        </div>
+      </div>
 
+      <div id="skills" class="skills-section">
+        <div class="skills-title">
+          <h2 class="title">Skills</h2>
         </div>
         <div class="about-skills" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <span class="skill-badge">
@@ -113,23 +125,34 @@
           <span class="skill-badge">
             <img src="img/python.png" alt="css" /></span>
           <span class="skill-badge">
+            <img src="img/react.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/HTML.png" alt="HTML" /></span>
+          <span class="skill-badge">
+            <img src="img/css.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/js.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/bootstrap.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/npm.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/webpack.png" alt="css" /></span>
+          <span class="skill-badge">
             <img src="img/dbms.png" alt="css" /></span>
-          <div class="skills-container">
-            <span class="skill-badge">
-              <img src="img/HTML.png" alt="HTML" /></span>
-            <span class="skill-badge">
-              <img src="img/css.png" alt="css" /></span>
-            <span class="skill-badge">
-              <img src="img/js.png" alt="css" /></span>
-            <span class="skill-badge">
-              <img src="img/npm.png" alt="css" /></span>
-            <span class="skill-badge">
-              <img src="img/webpack.png" alt="css" /></span>
-            <span class="skill-badge">
-              <img src="img/sql.png" alt="css" /></span>
-          </div>
+          <span class="skill-badge">
+            <img src="img/mysql.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/powerBI.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/vscode.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/github.png" alt="css" /></span>
+          <span class="skill-badge">
+            <img src="img/vercel.png" alt="css" /></span>
         </div>
       </div>
+
       <div class="services-row">
         <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
           <img class="service-card-img" src="img/services/01.svg" alt="" />
@@ -177,7 +200,7 @@
         <div class="project-box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-delay="900"
           data-aos-duration="1000">
           <a href="https://github.com/rahulmehra00/E-Bazaar.git">
-            <img class="project-img" src="img/works/04.jpg" alt="" />
+            <img class="project-img" src="img/works/04.png" alt="" />
             <div class="project-mask">
               <div class="project-caption">
                 <h5 class="white">E- commerce</h5>
@@ -236,7 +259,7 @@
         <div class="project-box" data-aos="fade-zoom-in" data-aos-easing="ease-in-out" data-aos-delay="1500"
           data-aos-duration="1000">
           <a href="https://rahulmehra00.github.io/">
-            <img class="project-img" src="img/works/06.jpg" alt="" />
+            <img class="project-img" src="img/works/06.png" alt="" />
             <div class="project-mask">
               <div class="project-caption">
                 <h5 class="white">My Portfolio</h5>
@@ -248,6 +271,75 @@
       </div>
     </div>
   </section>
+
+  <!-- Education Section Start -->
+  <section id="education" class="education-section">
+    <div class="container">
+      <h2 class="title">Education</h2>
+      <p class="education-intro">
+        My education has been a journey of self-discovery and growth. My educational details are as follows.
+      </p>
+      <div class="education-list">
+        <!-- Education Card 1: MCA -->
+        <div class="education-card">
+          <img src="img/cdac.png" alt="CDAC Logo" class="education-logo">
+          <div class="education-details">
+            <h3>Centre for Development of Advanced Computing (CDAC)</h3>
+            <div class="education-degree">Master of Computer Applications (MCA)</div>
+            <div class="education-duration">Year of Completion: [Add Year]</div>
+            <div class="education-grade"><strong>Grade:</strong></div>
+            <p>
+              Completed MCA at CDAC, focusing on advanced computing, software engineering, and project development.
+              Gained hands-on experience in modern technologies and real-world applications.
+            </p>
+          </div>
+        </div>
+        <!-- Education Card 2: B.Sc. (Hons) -->
+        <div class="education-card">
+          <img src="img/kmv.png" alt="KMV Logo" class="education-logo">
+          <div class="education-details">
+            <h3>Keshav Mahavidyalaya (KMV)</h3>
+            <div class="education-degree">Bachelor of Science (Hons) Computer Science</div>
+            <div class="education-duration">Year of Completion: [Add Year]</div>
+            <div class="education-grade"><strong>Grade:</strong></div>
+            <p>
+              Graduated with B.Sc. (Hons) in Computer Science, covering core subjects like Data Structures, Algorithms,
+              Programming, and Database Systems. Developed a strong foundation in computer science principles.
+            </p>
+          </div>
+        </div>
+        <!-- Education Card 3: XIIth and Xth -->
+        <div class="education-card">
+          <img src="img/bbps.png" alt="BBPS Logo" class="education-logo">
+          <div class="education-details">
+            <h3>Bal Bharati Public School (BBPS)</h3>
+            <div class="education-degree">CBSE (XIIth)</div>
+            <div class="education-duration">Year of Completion: [Add Year]</div>
+            <div class="education-grade"><strong>Grade:</strong></div>
+            <p>
+              Completed 12th grade at BBPS with a focus on Science and Computer Science, building a strong academic base
+              for further studies in technology.
+            </p>
+          </div>
+        </div>
+        <div class="education-card">
+          <img src="img/bbps.png" alt="BBPS Logo" class="education-logo">
+          <div class="education-details">
+            <h3>Bal Bharati Public School (BBPS)</h3>
+            <div class="education-degree">CBSE (Xth)</div>
+            <div class="education-duration">Year of Completion: [Add Year]</div>
+            <div class="education-grade"><strong>Grade:</strong></div>
+            <p>
+              Completed 10th grade at BBPS, establishing a solid foundation in core subjects and preparing for higher
+              education.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Education Section End -->
+
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
@@ -286,10 +378,10 @@
 <script>
   //hamburger 
   document.addEventListener("DOMContentLoaded", function () {
-
     const navBtn = document.getElementById("nav-btn");
     const nav = document.getElementById("nav");
     const navBtnImg = document.getElementById("nav-btn-img");
+    const navLinks = document.querySelectorAll(".nav-link");
 
     navBtn.addEventListener("click", function () {
       nav.classList.toggle("open");
@@ -300,7 +392,50 @@
         navBtnImg.src = "img/icons/open.svg";
       }
     });
+
+    // Close hamburger menu when a nav link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        navBtnImg.src = "img/icons/open.svg";
+      });
+    });
   });
 </script>
+
+<script>
+  const toggleBtn = document.getElementById("darkToggleBtn");
+
+  toggleBtn.addEventListener("click", () => {
+    // Add rotation animation
+    toggleBtn.classList.add('rotate');
+
+    // Remove animation class after animation completes
+    setTimeout(() => {
+      toggleBtn.classList.remove('rotate');
+    }, 500);
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggleBtn.textContent = "☀️";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleBtn.textContent = "🌙";
+    }
+  });
+
+  // Load saved preference
+  window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    } else {
+      toggleBtn.textContent = "🌙";
+    }
+  });
+</script>
+
 
 </html>

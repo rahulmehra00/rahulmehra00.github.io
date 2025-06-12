@@ -1178,13 +1178,13 @@ body.dark .dark-mode-toggle:hover {
 
 /* Dark mode specific styles for the dots and lines */
 body.dark .education-card::before {
-  border-color: rgb(156, 39, 176);
+  border-color: #7c3aed;
   box-shadow: 0 0 15px rgba(156, 39, 176, 0.7); /* Enhanced glow in dark mode */
 }
 
 body.dark .education-card::after {
-  background-color: rgb(156, 39, 176);
-  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3); /* Subtle glow for the line */
+  background-color: #7c3aed;
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.7); /* Subtle glow for the line */
 }
 
 /* Adjust the logo for the timeline effect */
@@ -1321,7 +1321,7 @@ body.dark .education-card {
 }
 
 body.dark .education-card::before {
-  border: 3px solid #df21cf;
+  border: 3px solid #7c3aed;
 }
 
 .about-bordered-box {

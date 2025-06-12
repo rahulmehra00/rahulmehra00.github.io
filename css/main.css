@@ -1277,8 +1277,8 @@ body.dark .education-card::after {
 
 @media (max-width: 600px) {
   .education-list {
-    grid-template-columns: 2px 1fr; /* Single column for cards, line on left */
-    gap: 20px; /* Gap between line and cards */
+    grid-template-columns: 2px 1fr;
+    gap: 20px;
   }
 
   .education-list::before {
@@ -1290,35 +1290,47 @@ body.dark .education-card::after {
   .education-card {
     grid-column: 2;
     justify-self: start;
-    margin-left: 0; /* Reset margin-left from wider screens */
+    margin-left: 0;
     margin-right: 0;
-    max-width: calc(100% - 20px); /* Adjust max-width to fit beside the line */
-    flex-direction: column; /* Stack logo and text vertically on small screens */
+    max-width: calc(100% - 20px);
+    flex-direction: column;
     align-items: center;
     padding: 15px 15px 15px 30px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Mobile hover effects */
+  .education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(124, 58, 237, 0.2),
+      rgba(23, 92, 230, 0.25) 0px 0px 12px 0px;
+  }
+
+  .education-card:hover::before {
+    transform: translateX(-50%) scale(1.1);
   }
 
   /* Adjust dot and line positioning for mobile */
   .education-card::before {
-    width: 12px; /* Smaller dot for mobile */
+    width: 12px;
     height: 12px;
     top: 25px;
-    left: -15px; /* Adjust position for mobile */
+    left: -15px;
   }
 
   .education-card::after {
-    top: 59px; /* Adjust line start position for mobile */
+    top: 59px;
     left: -15px;
-    width: 1.5px; /* Slightly thinner line for mobile */
+    width: 1.5px;
   }
 
   .education-card:last-child::after {
-    height: calc(100% - 56px); /* Adjust last line height for mobile */
+    height: calc(100% - 56px);
   }
 
   .education-card:nth-child(odd),
   .education-card:nth-child(even) {
-    margin: 0 auto 40px auto; /* Re-center cards for mobile, consistent bottom margin */
+    margin: 0 auto 40px auto;
     transform: none;
   }
 

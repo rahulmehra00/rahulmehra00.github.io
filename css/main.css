@@ -1280,21 +1280,33 @@ body.dark .education-card::after {
     padding: 15px 15px 15px 30px;
   }
 
+  /* Adjust dot and line positioning for mobile */
+  .education-card::before {
+    width: 12px; /* Smaller dot for mobile */
+    height: 12px;
+    top: 25px;
+    left: -15px; /* Adjust position for mobile */
+  }
+
+  .education-card::after {
+    top: 37px; /* Adjust line start position for mobile */
+    left: -15px;
+    width: 1.5px; /* Slightly thinner line for mobile */
+  }
+
+  .education-card:last-child::after {
+    height: calc(100% - 37px); /* Adjust last line height for mobile */
+  }
+
   .education-card:nth-child(odd),
   .education-card:nth-child(even) {
     margin: 0 auto 40px auto; /* Re-center cards for mobile, consistent bottom margin */
     transform: none;
   }
 
-  .education-card::before {
-    left: -10px; /* Position on the left line for mobile */
-    right: auto;
-    transform: translateX(-50%);
-  }
-
   .education-card:nth-child(odd)::before,
   .education-card:nth-child(even)::before {
-    left: -10px;
+    left: -15px;
     right: auto;
     transform: translateX(-50%);
   }

@@ -1165,7 +1165,7 @@ body.dark .dark-mode-toggle:hover {
   top: 46px; /* Position below the dot (30px + 16px) */
   left: -20px;
   width: 2px;
-  height: calc(100% - 46px); /* Extend to bottom of card */
+  height: calc(100% - 6px); /* Extend to bottom of card */
   background-color: rgb(156, 39, 176); /* Same color as dot border */
   transform: translateX(-50%);
   z-index: 0;

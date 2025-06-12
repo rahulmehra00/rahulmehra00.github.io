@@ -1149,10 +1149,10 @@ body.dark .dark-mode-toggle:hover {
   border-width: 2px;
   padding: 4px;
   border-radius: 50%;
-  box-shadow: none;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5); /* Add glow effect */
   margin: 0; /* Reset margin */
   background-color: transparent;
-  border-color: rgb(156, 39, 176); /* Bullet point border color */
+  border-color: #7c3aed; /* Changed to purple color */
   z-index: 1;
   left: -20px; /* Increased gap between dot and card */
   transform: translateX(-50%); /* Center on the line */
@@ -1166,7 +1166,7 @@ body.dark .dark-mode-toggle:hover {
   left: -20px;
   width: 2px;
   height: calc(100% - 6px); /* Extend to bottom of card */
-  background-color: rgb(156, 39, 176); /* Same color as dot border */
+  background-color: #7c3aed; /* Changed to match dot color */
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -1176,11 +1176,15 @@ body.dark .dark-mode-toggle:hover {
   height: calc(100% - 56px); /* Only extend to the bottom of the last card */
 }
 
-/* Remove the odd/even specific positioning since we want all dots on the left */
-.education-card:nth-child(odd)::before,
-.education-card:nth-child(even)::before {
-  left: -20px; /* Increased gap between dot and card */
-  transform: translateX(-50%);
+/* Dark mode specific styles for the dots and lines */
+body.dark .education-card::before {
+  border-color: rgb(156, 39, 176);
+  box-shadow: 0 0 15px rgba(156, 39, 176, 0.7); /* Enhanced glow in dark mode */
+}
+
+body.dark .education-card::after {
+  background-color: rgb(156, 39, 176);
+  box-shadow: 0 0 10px rgba(156, 39, 176, 0.3); /* Subtle glow for the line */
 }
 
 /* Adjust the logo for the timeline effect */
@@ -1305,7 +1309,7 @@ body.dark .education-card {
 }
 
 body.dark .education-card::before {
-  border: 3px solid #1a1a1a;
+  border: 3px solid #df21cf;
 }
 
 .about-bordered-box {

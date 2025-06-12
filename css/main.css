@@ -77,9 +77,9 @@ p {
 
 .btn:hover,
 .btn:focus {
-  background-color: var(--secondary-accent);
-  border-color: var(--secondary-accent);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  border-color: var(--primary-accent);
+  color: var(--primary-accent);
   outline: 0;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -103,6 +103,8 @@ p {
   background: var(--primary-accent);
   border: 2px solid var(--primary-accent);
   color: var(--white-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-white:active {

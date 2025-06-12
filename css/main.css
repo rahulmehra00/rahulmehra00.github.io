@@ -1171,6 +1171,11 @@ body.dark .dark-mode-toggle:hover {
   z-index: 0;
 }
 
+/* Make the last education card's vertical line match its height */
+.education-card:last-child::after {
+  height: calc(100% - 56px); /* Only extend to the bottom of the last card */
+}
+
 /* Remove the odd/even specific positioning since we want all dots on the left */
 .education-card:nth-child(odd)::before,
 .education-card:nth-child(even)::before {

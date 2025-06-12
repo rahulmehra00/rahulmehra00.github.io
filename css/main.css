@@ -1116,14 +1116,32 @@ body.dark .dark-mode-toggle:hover {
     rgba(23, 92, 230, 0.15) 0px 0px 10px 0px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transition-behavior: normal;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-  transition-property: all;
   text-align: left;
-  margin-bottom: 40px; /* Space between cards in their respective columns */
-  max-width: 450px; /* Adjusted width for alternating columns */
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+/* Add hover effects */
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2),
+    rgba(23, 92, 230, 0.25) 0px 0px 15px 0px;
+  border-color: #7c3aed;
+}
+
+.education-card:hover::before {
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+}
+
+/* Dark mode hover effects */
+body.dark .education-card:hover {
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3),
+    rgba(23, 92, 230, 0.35) 0px 0px 15px 0px;
+}
+
+body.dark .education-card:hover::before {
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.9);
 }
 
 .education-card:nth-child(odd) {

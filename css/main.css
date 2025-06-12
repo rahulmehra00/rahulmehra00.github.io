@@ -1095,8 +1095,11 @@ body.dark .dark-mode-toggle:hover {
 
 /* The vertical line for the timeline */
 .education-list::before {
-  /* Removed properties that create the central line as it's not needed for single column */
-  content: none; /* Hide the line */
+  content: "";
+  grid-column: 2; /* Place in the second (line) column */
+  grid-row: 1 / -1; /* Span from first to last row */
+  background-color: #7c3aed; /* Purple color for the line */
+  z-index: 0;
 }
 
 /* Each education card */
@@ -1119,14 +1122,18 @@ body.dark .dark-mode-toggle:hover {
   transition-delay: 0s;
   transition-property: all;
   text-align: left;
-  margin: 0 auto 40px auto;
-  max-width: 650px;
+  margin-bottom: 40px; /* Space between cards in their respective columns */
+  max-width: 450px; /* Adjusted width for alternating columns */
 }
 
-.education-card:nth-child(odd),
+.education-card:nth-child(odd) {
+  grid-column: 1; /* Place odd cards in the first column (left side) */
+  justify-self: end; /* Align to the end of the grid cell (right edge of card towards the line) */
+}
+
 .education-card:nth-child(even) {
-  margin: 0 auto 40px auto;
-  transform: none;
+  grid-column: 3; /* Place even cards in the third column (right side) */
+  justify-self: start; /* Align to the start of the grid cell (left edge of card towards the line) */
 }
 
 /* Circle on the timeline for each card */
@@ -1136,18 +1143,25 @@ body.dark .dark-mode-toggle:hover {
   top: 30px;
   width: 16px;
   height: 16px;
-  background-color: #7c3aed;
+  display: flex;
+  align-self: baseline;
+  border-style: solid;
+  border-width: 2px;
+  padding: 4px;
   border-radius: 50%;
-  border: 3px solid var(--white-color);
+  box-shadow: none;
+  margin: 0; /* Reset margin */
+  background-color: transparent;
+  border-color: rgb(156, 39, 176); /* Bullet point border color */
   z-index: 1;
-  left: -8px;
-  transform: translateX(-50%);
+  left: -20px; /* Increased gap between dot and card */
+  transform: translateX(-50%); /* Center on the line */
 }
 
+/* Remove the odd/even specific positioning since we want all dots on the left */
 .education-card:nth-child(odd)::before,
 .education-card:nth-child(even)::before {
-  left: -8px;
-  right: auto;
+  left: -20px; /* Increased gap between dot and card */
   transform: translateX(-50%);
 }
 
@@ -1209,51 +1223,56 @@ body.dark .dark-mode-toggle:hover {
   text-align: left;
 }
 
+/* Education Intro specific styling */
+.education-intro {
+  text-align: center;
+  color: #565a5b;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: -1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 600px) {
   .education-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+    grid-template-columns: 2px 1fr; /* Single column for cards, line on left */
+    gap: 20px; /* Gap between line and cards */
   }
 
   .education-list::before {
-    content: none;
+    grid-column: 1;
+    left: auto;
+    transform: none;
   }
 
   .education-card {
-    margin: 0 auto 40px auto;
-    max-width: 90%;
-    flex-direction: column;
+    grid-column: 2;
+    justify-self: start;
+    margin-left: 0; /* Reset margin-left from wider screens */
+    margin-right: 0;
+    max-width: calc(100% - 20px); /* Adjust max-width to fit beside the line */
+    flex-direction: column; /* Stack logo and text vertically on small screens */
     align-items: center;
-    padding: 15px;
+    padding: 15px 15px 15px 30px;
   }
 
   .education-card:nth-child(odd),
   .education-card:nth-child(even) {
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px auto; /* Re-center cards for mobile, consistent bottom margin */
     transform: none;
   }
 
-  .education-logo {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .education-details {
-    align-items: center;
-  }
-
-  .education-details h3,
-  .education-degree,
-  .education-duration,
-  .education-grade,
-  .education-details p {
-    text-align: center;
-  }
-
   .education-card::before {
-    left: -8px;
+    left: -10px; /* Position on the left line for mobile */
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .education-card:nth-child(odd)::before,
+  .education-card:nth-child(even)::before {
+    left: -10px;
     right: auto;
     transform: translateX(-50%);
   }

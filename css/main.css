@@ -1140,7 +1140,7 @@ body.dark .dark-mode-toggle:hover {
 .education-card::before {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 15px;
   width: 16px;
   height: 16px;
   display: flex;

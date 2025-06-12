@@ -1289,13 +1289,13 @@ body.dark .education-card::after {
   }
 
   .education-card::after {
-    top: 37px; /* Adjust line start position for mobile */
+    top: 59px; /* Adjust line start position for mobile */
     left: -15px;
     width: 1.5px; /* Slightly thinner line for mobile */
   }
 
   .education-card:last-child::after {
-    height: calc(100% - 37px); /* Adjust last line height for mobile */
+    height: calc(100% - 56px); /* Adjust last line height for mobile */
   }
 
   .education-card:nth-child(odd),

@@ -1158,6 +1158,19 @@ body.dark .dark-mode-toggle:hover {
   transform: translateX(-50%); /* Center on the line */
 }
 
+/* Add vertical line below the dot */
+.education-card::after {
+  content: "";
+  position: absolute;
+  top: 46px; /* Position below the dot (30px + 16px) */
+  left: -20px;
+  width: 2px;
+  height: calc(100% - 46px); /* Extend to bottom of card */
+  background-color: rgb(156, 39, 176); /* Same color as dot border */
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
 /* Remove the odd/even specific positioning since we want all dots on the left */
 .education-card:nth-child(odd)::before,
 .education-card:nth-child(even)::before {

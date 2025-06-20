@@ -368,10 +368,12 @@ body.dark .hero-img::after {
   z-index: 1;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
   transition: transform 0.3s ease;
+  border-radius: 50%;
 }
 
 body.dark .hero-img img {
-  filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.1));
+  border: 4px solid #fff;
+  box-shadow: 0 0 24px 4px rgba(255, 255, 255, 0.15);
 }
 
 .hero-img:hover img {
@@ -891,7 +893,7 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  border-radius: 2px;
+  border-radius: 50%;
   transition: opacity 350ms, visibility 350ms;
 }
 
@@ -906,8 +908,14 @@ body.dark .skill-badge:hover img[src*="vercel.png"] {
 }
 
 .goToTop img {
-  height: 16px;
-  width: 16px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+body.dark .goToTop img {
+  background: #fff;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.25);
 }
 
 .goToTop:hover {
